@@ -2,6 +2,6 @@
   cursor: pointer;
 }
 
-span .star:not(:last-of-type) {
+.star svg {
   margin-right: 5px;
 }

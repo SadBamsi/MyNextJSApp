@@ -1,0 +1,38 @@
+.footer {
+  display: grid;
+  padding: 24px 32px;
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: 16px;
+  grid-template-areas: "copyright . link-block";
+  gap: 0 10px;
+}
+
+.copyright {
+  grid-area: copyright;
+  justify-self: start;
+}
+
+.link_block {
+  grid-area: link-block;
+  justify-self: end;
+}
+
+.link_block a:not(:last-of-type) {
+  margin-right: 40px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    grid-template-areas:
+      "copyright"
+      "link-block";
+    text-align: center;
+  }
+  .copyright {
+    justify-self: center;
+  }
+  .link_block {
+    justify-self: center;
+  }
+}

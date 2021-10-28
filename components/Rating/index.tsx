@@ -4,7 +4,7 @@ import React, {
   useEffect,
   useState,
 } from "react";
-import { Star } from "../Star";
+import { Star } from "../icon-components/Star";
 import styles from "./styles.module.css";
 
 interface IProps {

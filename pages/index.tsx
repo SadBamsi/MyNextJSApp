@@ -4,10 +4,11 @@ import { Button } from "../components/Button";
 import { Htag } from "../components/Htag";
 import { Paragraph } from "../components/Paragraph";
 import { Rating } from "../components/Rating";
-import { Star } from "../components/Star";
+import { Star } from "../components/icon-components/Star";
 import { Tag } from "../components/Tag";
+import { Layout, WithLayout } from "../layout/inedx";
 
-export default function Home(): JSX.Element {
+const Home = (): JSX.Element => {
   const [counter, setCounter] = useState<number>(0);
   const [rating, setRating] = useState(4);
 
@@ -19,24 +20,9 @@ export default function Home(): JSX.Element {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Htag tag="h2">Test</Htag>
-      <Button onClick={() => setCounter(counter + 1)}>+</Button>
-      <Button onClick={() => setCounter(counter - 1)}>-</Button>
-      <Paragraph>sgafgaj</Paragraph>
-      <Paragraph size="m">sgafgaj</Paragraph>
-      <Paragraph size="l">sgafgaj</Paragraph>
-      <Tag>Tag</Tag>
-      <Tag size="m" color="primary">
-        Primary
-      </Tag>
-      <Tag color="green">Green</Tag>
-      <Tag color="red">red</Tag>
-      <Tag color="gray" size="m">
-        gray
-      </Tag>
-
-      <Htag tag="h1">{counter}</Htag>
-      <Rating rating={rating} setRating={setRating} />
+      Main
     </>
   );
-}
+};
+
+export default WithLayout(Home);
