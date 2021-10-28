@@ -1,0 +1,7 @@
+.star {
+  cursor: pointer;
+}
+
+span .star:not(:last-of-type) {
+  margin-right: 5px;
+}

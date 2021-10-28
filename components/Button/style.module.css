@@ -1,0 +1,30 @@
+.btn {
+  outline: none;
+  padding: 0;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 1;
+  text-align: center;
+  border: 1px solid transparent;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.btn_content {
+  margin-right: 11px;
+}
+
+.primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.primary svg {
+  fill: var(--white);
+}
+
+.ghost {
+  color: var(--black);
+  background-color: transparent;
+  border-color: var(--button-border-color);
+}
