@@ -10,13 +10,15 @@ export const Footer: React.FC<IProps> = ({
 }) => {
   return (
     <footer {...props} className={`${styles.footer} ${propsClassName}`}>
-      <span className={styles.copyright}>
-        OwlTop © 2020 - 2021 Все права защищены
-      </span>
-      <div className={styles.link_block}>
-        <a href="#">Пользовательское соглашение</a>
-        <a href="#">Политика конфиденциальности</a>
+      <div className={styles.copyright}>
+        OwlTop © 2020 - {new Date().getFullYear()} Все права защищены
       </div>
+      <a className={styles.link} href="#">
+        Пользовательское соглашение
+      </a>
+      <a className={styles.link} href="#">
+        Политика конфиденциальности
+      </a>
     </footer>
   );
 };

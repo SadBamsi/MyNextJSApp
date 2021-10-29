@@ -6,7 +6,6 @@
     ". header header ."
     ". sidebar main ."
     "footer footer footer footer";
-  text-align: center;
   min-height: 100vh;
 }
 
@@ -37,7 +36,6 @@
 
 .footer {
   grid-area: footer;
-  background-color: rgb(92, 79, 54);
 }
 
 .sidebar {

@@ -1,10 +1,10 @@
 import Head from "next/head";
 import React from "react";
-import { WithLayout } from "../layout";
 import { GetStaticProps } from "next";
 import axios from "axios";
+import { WithLayout } from "../../layout";
 
-const Home: React.FC<IHomeProps> = ({ menu }) => {
+const Course: React.FC<ICourseProps> = ({ menu }) => {
   return (
     <>
       <Head>
@@ -22,9 +22,9 @@ const Home: React.FC<IHomeProps> = ({ menu }) => {
   );
 };
 
-export default WithLayout(Home);
+export default WithLayout(Course);
 
-export const getStaticProps: GetStaticProps<IHomeProps> = async () => {
+export const getStaticProps: GetStaticProps<ICourseProps> = async () => {
   const firstCategory = 0;
   const { data: menu } = await axios.post<MenuItem[]>(
     `${process.env.NEXT_PUBLIC_API}`,
@@ -54,7 +54,7 @@ interface MenuItem {
   pages: PageItem[];
 }
 
-interface IHomeProps extends Record<string, unknown> {
+interface ICourseProps extends Record<string, unknown> {
   menu: MenuItem[];
   firstCategory: number;
 }
