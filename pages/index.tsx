@@ -13,11 +13,6 @@ const Home: React.FC<IHomeProps> = ({ menu }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <ul>
-        {menu.map((el) => (
-          <li key={el._id.secondCategory}>{el._id.secondCategory}</li>
-        ))}
-      </ul>
     </>
   );
 };
@@ -26,7 +21,7 @@ export default WithLayout(Home);
 
 export const getStaticProps: GetStaticProps<IHomeProps> = async () => {
   const firstCategory = 0;
-  const { data: menu } = await axios.post<MenuItem[]>(
+  const { data: menu } = await axios.post<IMenuItem[]>(
     `${process.env.NEXT_PUBLIC_API}`,
     {
       firstCategory,
@@ -47,7 +42,7 @@ interface PageItem {
   category: string;
 }
 
-interface MenuItem {
+interface IMenuItem {
   _id: {
     secondCategory: string;
   };
@@ -55,6 +50,6 @@ interface MenuItem {
 }
 
 interface IHomeProps extends Record<string, unknown> {
-  menu: MenuItem[];
-  firstCategory: number;
+  menu?: IMenuItem[];
+  firstCategory?: number;
 }

@@ -1,0 +1,7 @@
+.menu {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px 0;
+  list-style: none;
+  padding-left: 0;
+}

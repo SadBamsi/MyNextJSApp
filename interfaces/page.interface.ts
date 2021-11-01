@@ -4,13 +4,13 @@ export enum ETopLevelCategory {
   Books,
   Products,
 }
-export interface TopPageAdvantage {
+export interface ITopPageAdvantage {
   _id: string;
   title: string;
   description: string;
 }
 
-export interface HhData {
+export interface IHhData {
   _id: string;
   count: number;
   juniorSalary: number;
@@ -19,7 +19,7 @@ export interface HhData {
   updatedAt: Date;
 }
 
-export interface TopPageModel {
+export interface ITopPageModel {
   tags: string[];
   _id: string;
   secondCategory: string;
@@ -31,11 +31,11 @@ export interface TopPageModel {
   metaTitle: string;
   metaDescription: string;
   firstCategory: ETopLevelCategory;
-  advantages: TopPageAdvantage[];
+  advantages: ITopPageAdvantage[];
   createdAt: Date;
   updatedAt: Date;
   __v: number;
-  hh: HhData;
+  hh: IHhData;
   qas: any[];
   addresses: any[];
 }
