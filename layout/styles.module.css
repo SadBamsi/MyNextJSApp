@@ -40,7 +40,6 @@
 
 .sidebar {
   grid-area: sidebar;
-  background-color: rgb(155, 68, 68);
 }
 
 .main {

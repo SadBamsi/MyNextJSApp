@@ -1,3 +1,5 @@
+@import "./variables.css";
+
 html,
 body {
   padding: 0;
@@ -12,16 +14,4 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-:root {
-  --black: #3b434e;
-  --white: #ffffff;
-  --primary: #7653fc;
-  --red: #fc836d;
-  --green: #1dc37e;
-  --green-light: #c8f8e4;
-  --button-border-color: #ebebeb;
-  --tag-bg-gray: #b3c0d9;
-  --family: "Noto Sans Display", sans-serif;
 }

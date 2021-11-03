@@ -1,4 +1,3 @@
-import Head from "next/head";
 import React, { ReactNode } from "react";
 import {
   GetStaticPaths,
@@ -69,7 +68,7 @@ export const getStaticProps: GetStaticProps<ICourseProps> = async ({
   };
 };
 
-interface PageItem {
+export interface PageItem {
   alias: string;
   title: string;
   _id: string;
@@ -81,6 +80,7 @@ export interface IMenuItem {
     secondCategory: string;
   };
   pages: PageItem[];
+  isOpen?: boolean;
 }
 
 interface ICourseProps extends Record<string, unknown> {

@@ -35,7 +35,7 @@ export const getStaticProps: GetStaticProps<IHomeProps> = async () => {
   };
 };
 
-interface PageItem {
+export interface IPageItem {
   alias: string;
   title: string;
   _id: string;
@@ -46,7 +46,7 @@ interface IMenuItem {
   _id: {
     secondCategory: string;
   };
-  pages: PageItem[];
+  pages: IPageItem[];
 }
 
 interface IHomeProps extends Record<string, unknown> {
