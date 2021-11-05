@@ -1,0 +1,7 @@
+.product {
+  display: grid;
+}
+
+.product_header {
+  display: block;
+}

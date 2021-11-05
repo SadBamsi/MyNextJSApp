@@ -4,6 +4,7 @@
   display: inline-flex;
   align-items: center;
   padding: 0 10px;
+  width: fit-content;
 }
 
 .tag:not(:last-of-type) {

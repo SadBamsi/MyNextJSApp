@@ -1,6 +1,6 @@
 import { createContext, PropsWithChildren, ReactNode, useState } from "react";
 import { ETopLevelCategory } from "../interfaces/page.interface";
-import { IMenuItem } from "../pages/courses/[alias]";
+import { IMenuItem } from "../pages/[route]/[alias]";
 
 export interface IAppContext {
   menu: IMenuItem[];

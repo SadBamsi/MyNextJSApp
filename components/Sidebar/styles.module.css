@@ -1,0 +1,11 @@
+.sidebar {
+  padding: 15px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  align-content: flex-start;
+}
+
+.logo {
+  margin-left: 15px;
+}

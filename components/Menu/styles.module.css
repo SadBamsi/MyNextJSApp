@@ -77,6 +77,10 @@
   transition: all 0.3s;
 }
 
+.menu_third_level_item__active {
+  color: var(--primary);
+}
+
 .menu_third_level_item:hover {
   opacity: 0.8;
 }

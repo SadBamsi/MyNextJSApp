@@ -1,0 +1,16 @@
+.top_page_component {
+  background-color: var(--white);
+  height: 100%;
+}
+
+.top_page_header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 15px 0;
+}
+
+.products {
+}
