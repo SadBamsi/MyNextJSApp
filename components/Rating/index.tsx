@@ -5,7 +5,6 @@ import React, {
   useState,
 } from "react";
 import { Star } from "../icon-components/Star";
-import styles from "./styles.module.css";
 
 interface IProps {
   rating: number;
@@ -29,9 +28,9 @@ export const Rating: React.FC<IProps> = ({
     const updatedArray = ratingArray.map((el, i) => (
       <Star
         isField={i < currentNumber}
-        onHover={() => hoveringFill(i + 1)}
-        onLeave={() => constructorArray(rating)}
-        onClick={() => setRating && setRating(i + 1)}
+        onHover={() => isEditable && hoveringFill(i + 1)}
+        onLeave={() => isEditable && constructorArray(rating)}
+        onClick={() => isEditable && setRating && setRating(i + 1)}
       />
     ));
     setRatingArray(updatedArray);

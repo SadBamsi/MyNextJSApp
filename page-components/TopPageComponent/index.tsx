@@ -1,5 +1,7 @@
 import React from "react";
 import { Htag } from "../../components/Htag";
+import { Product } from "../../components/Product";
+import { Sort } from "../../components/Sort";
 import { Tag } from "../../components/Tag";
 import {
   ETopLevelCategory,
@@ -29,14 +31,14 @@ export const ToPPageComponent: React.FC<ITopPageComponentProps> = ({
           </Tag>
         )}
         <div>
-          <span>Sorting</span>
-          <span>Sorting</span>
+          <Sort isActive={true}>По рейтингу</Sort>
+          <Sort>По цене</Sort>
         </div>
       </header>
       {products && (
         <div className={styles.products}>
           {products.map((el) => (
-            <div>{el.title}</div>
+            <Product key={el.title} product={el} />
           ))}
         </div>
       )}

@@ -31,3 +31,8 @@ export const firstLevelMenu: IFirstLevelMenu[] = [
     id: ETopLevelCategory.Products,
   },
 ];
+
+export const priceRegexp = /\B(?=(\d{3})+(?!\d))/g;
+
+export const priceConvert = (price: number) =>
+  price.toString().replace(priceRegexp, " ") + " ₽";
