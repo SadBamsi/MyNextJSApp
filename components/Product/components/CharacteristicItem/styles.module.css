@@ -1,0 +1,21 @@
+.characteristic {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 13px;
+  align-items: end;
+}
+
+.characteristic_description {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.characteristic_dots {
+  border-bottom: 1px dotted var(--dases-color);
+  margin-bottom: 5px;
+}
+
+.characteristic_name {
+  font-weight: 500;
+  font-size: 16px;
+}

@@ -7,6 +7,9 @@ import { Tag } from "../Tag";
 import Cup from "./icons/Cup.svg";
 import { Rating } from "../Rating";
 import { priceConvert } from "../../helpers/helpers";
+import { CharacteristicItem } from "./components/CharacteristicItem";
+import { Advantage } from "../Advantage";
+import { Button } from "../Button";
 
 interface IProps {
   product: IProductModel;
@@ -53,6 +56,40 @@ export const Product: React.FC<IProps> = ({ product }) => {
           <p>{reviewCount} отзывов</p>
         </div>
       </header>
+      <div className={styles.product_body}>
+        <span className={styles.product_description}>
+          {product.description}
+        </span>
+        <div className={styles.product_advantages_area}>
+          <ul className={styles.product_characteristics}>
+            {product.characteristics.map((item) => (
+              <CharacteristicItem
+                description={item.name}
+                value={item.value}
+                tags={product.tags}
+              />
+            ))}
+            <li>
+              {" "}
+              <span>
+                {product.tags?.map((el) => (
+                  <Tag>{el}</Tag>
+                ))}
+              </span>
+            </li>
+          </ul>
+          <div className={styles.advantages}>
+            {product.disAdvantages && (
+              <Advantage isPositive={false}>{product.disAdvantages}</Advantage>
+            )}
+            {product.advantages && <Advantage>{product.advantages}</Advantage>}
+          </div>
+        </div>
+      </div>
+      <div className={styles.button_area}>
+        <Button primary>Узнать подробнее</Button>
+        <Button withArrow>Читать отзывы</Button>
+      </div>
     </div>
   );
 };

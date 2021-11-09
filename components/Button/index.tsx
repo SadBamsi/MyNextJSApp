@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
-import Arrow from "/Arrow.svg";
+import Arrow from "../../public/Arrow.svg";
 import styles from "./style.module.css";
 
 interface IProps

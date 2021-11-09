@@ -2,6 +2,10 @@
   cursor: pointer;
 }
 
+.star_fill svg {
+  fill: var(--primary);
+}
+
 .star svg {
   margin-right: 5px;
 }

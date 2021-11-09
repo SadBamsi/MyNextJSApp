@@ -12,5 +12,7 @@
   padding: 15px 0;
 }
 
-.products {
+.top_page_sort_area {
+  display: grid;
+  grid-template-columns: auto auto;
 }

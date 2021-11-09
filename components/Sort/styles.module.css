@@ -9,12 +9,16 @@
   cursor: pointer;
   transition: opacity 0.3s ease-in-out;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: auto 1fr;
+  align-items: center;
   grid-gap: 10px;
 }
 
 .sort__active {
   color: var(--primary);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .sort:hover {

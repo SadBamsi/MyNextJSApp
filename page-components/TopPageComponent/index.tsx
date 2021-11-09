@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Htag } from "../../components/Htag";
 import { Product } from "../../components/Product";
 import { Sort } from "../../components/Sort";
@@ -21,6 +21,7 @@ export const ToPPageComponent: React.FC<ITopPageComponentProps> = ({
   page,
   products,
 }) => {
+  const [active, setActive] = useState(false);
   return (
     <section className={styles.top_page_component}>
       <header className={styles.top_page_header}>
@@ -30,7 +31,7 @@ export const ToPPageComponent: React.FC<ITopPageComponentProps> = ({
             {products.length}
           </Tag>
         )}
-        <div>
+        <div className={styles.top_page_sort_area}>
           <Sort isActive={true}>По рейтингу</Sort>
           <Sort>По цене</Sort>
         </div>

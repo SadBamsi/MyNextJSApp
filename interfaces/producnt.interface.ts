@@ -25,6 +25,7 @@ export interface IProductModel {
   oldPrice: number;
   characteristics: IPageCharacteristic[];
   advantages: string;
+  disAdvantages?: string;
   initialRating: number;
   createdAt: Date;
   updatedAt: Date;

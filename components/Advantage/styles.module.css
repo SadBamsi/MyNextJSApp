@@ -1,0 +1,16 @@
+.advantage {
+  padding-left: 15px;
+  border-left: 3px solid var(--green);
+}
+
+.advantage:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+.advantage h3 {
+  margin-bottom: 5px;
+}
+
+.advatage__negative {
+  border-left-color: var(--red);
+}
