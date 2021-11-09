@@ -93,3 +93,4 @@ export const Product: React.FC<IProps> = ({ product }) => {
     </div>
   );
 };
+``;
