@@ -1,3 +1,8 @@
+.sort_area {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 8px;
+}
 .sort {
   outline: none;
   border: none;

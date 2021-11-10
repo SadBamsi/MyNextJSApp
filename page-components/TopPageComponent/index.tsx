@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import { Htag } from "../../components/Htag";
 import { Product } from "../../components/Product";
-import { Sort } from "../../components/Sort";
+import { ESort, Sort } from "../../components/Sort";
 import { Tag } from "../../components/Tag";
 import {
   ETopLevelCategory,
   ITopPageModel,
 } from "../../interfaces/page.interface";
 import { IProductModel } from "../../interfaces/producnt.interface";
+import { sortReducer } from "./sort.reducer";
 import styles from "./styles.module.css";
 
 interface ITopPageComponentProps extends Record<string, unknown> {
@@ -17,32 +18,36 @@ interface ITopPageComponentProps extends Record<string, unknown> {
 }
 
 export const ToPPageComponent: React.FC<ITopPageComponentProps> = ({
-  firstCategory,
   page,
   products,
 }) => {
-  const [active, setActive] = useState(false);
+  const setSort = (sort: ESort) => {
+    dispatchSort({ type: sort });
+  };
+  const [{ products: sortedProducts, sort }, dispatchSort] = useReducer(
+    sortReducer,
+    {
+      products: products as any,
+      sort: ESort.Rating,
+    }
+  );
+
   return (
     <section className={styles.top_page_component}>
       <header className={styles.top_page_header}>
         <Htag tag={"h1"}>{page?.title}</Htag>
-        {products && (
-          <Tag color={"gray"} size={"l"}>
-            {products.length}
-          </Tag>
-        )}
+        <Tag color={"gray"} size={"l"}>
+          {sortedProducts.length}
+        </Tag>
         <div className={styles.top_page_sort_area}>
-          <Sort isActive={true}>По рейтингу</Sort>
-          <Sort>По цене</Sort>
+          <Sort sort={sort} setSort={setSort} />
         </div>
       </header>
-      {products && (
-        <div className={styles.products}>
-          {products.map((el) => (
-            <Product key={el.title} product={el} />
-          ))}
-        </div>
-      )}
+      <div className={styles.products}>
+        {sortedProducts.map((el: IProductModel) => (
+          <Product key={el.title} product={el} />
+        ))}
+      </div>
     </section>
   );
 };

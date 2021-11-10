@@ -24,6 +24,7 @@
   background-color: blue;
   border-radius: 5px;
   grid-row: span 2;
+  height: 100%;
 }
 
 .product_name_wrapper {

@@ -1,5 +1,4 @@
 import styles from "./styles.module.css";
-import Image from "next/image";
 import React from "react";
 import { Htag } from "../Htag";
 import { IProductModel } from "../../interfaces/producnt.interface";
@@ -16,17 +15,12 @@ interface IProps {
 }
 
 export const Product: React.FC<IProps> = ({ product }) => {
-  const { image, title, price, oldPrice, credit, initialRating, reviewCount } =
+  const { title, price, oldPrice, credit, initialRating, reviewCount } =
     product;
   return (
     <div className={styles.product}>
       <header className={styles.product_header}>
-        <Image
-          width={70}
-          height={70}
-          src={image}
-          className={styles.product_image}
-        />
+        <div className={styles.product_image} />
         <div className={styles.product_name}>
           <div className={styles.product_name_wrapper}>
             <Htag tag="h2" className={styles.product_title}>
