@@ -9,12 +9,14 @@ interface IProps
   > {
   primary?: boolean;
   withArrow?: boolean;
+  opened?: boolean;
 }
 
 export const Button: React.FC<IProps> = ({
   children,
   primary,
   withArrow,
+  opened,
   ...rest
 }) => {
   return (
@@ -23,7 +25,13 @@ export const Button: React.FC<IProps> = ({
       className={`${styles.btn} ${primary ? styles.primary : styles.ghost}`}
     >
       <span className={withArrow ? styles.btn_content : ""}>{children}</span>
-      {withArrow && <Arrow width={6} height={10} />}
+      {withArrow && (
+        <Arrow
+          className={`${styles.arrow} ${opened ? styles.opened : ""}`}
+          width={6}
+          height={10}
+        />
+      )}
     </button>
   );
 };

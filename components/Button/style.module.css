@@ -8,6 +8,15 @@
   border: 1px solid transparent;
   padding: 10px;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.arrow {
+  transition: all 0.3s ease-in-out;
+}
+
+.opened {
+  transform: rotate(90deg);
 }
 
 .btn_content {

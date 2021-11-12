@@ -1,7 +1,7 @@
 import React, { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
 import styles from "./styles.module.css";
 import SortIcon from "./icons/Sort.svg";
-import { Input } from "../Input";
+import { TextaArea } from "../Textarea";
 
 export enum ESort {
   Rating,
@@ -18,8 +18,6 @@ interface IProps
 }
 
 export const Sort: React.FC<IProps> = ({ sort, setSort, ...rest }) => {
-  console.log(sort === ESort.Rating);
-
   return (
     <div className={styles.sort_area}>
       <button
@@ -42,7 +40,6 @@ export const Sort: React.FC<IProps> = ({ sort, setSort, ...rest }) => {
         {sort === ESort.Price && <SortIcon />}
         По цене
       </button>
-      <Input />
     </div>
   );
 };

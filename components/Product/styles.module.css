@@ -21,7 +21,6 @@
 }
 
 .product_image {
-  background-color: blue;
   border-radius: 5px;
   grid-row: span 2;
   height: 100%;
@@ -98,4 +97,10 @@
   display: flex;
   justify-content: flex-start;
   gap: 20px;
+}
+
+.reviews {
+}
+.form {
+  border-top: 1px solid var(--menu-border-color);
 }

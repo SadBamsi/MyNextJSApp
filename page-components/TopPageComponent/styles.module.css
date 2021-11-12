@@ -9,7 +9,8 @@
   align-items: center;
   justify-content: flex-start;
   gap: 20px;
-  padding: 15px 0;
+  padding: 15px 30px;
+  background-color: var(--general-bg);
 }
 
 .top_page_sort_area {

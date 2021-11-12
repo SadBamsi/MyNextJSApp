@@ -7,6 +7,7 @@
     ". sidebar main ."
     "footer footer footer footer";
   min-height: 100vh;
+  gap: 0 30px;
 }
 
 @media (max-width: 768px) {

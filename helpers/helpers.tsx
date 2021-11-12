@@ -36,3 +36,14 @@ export const priceRegexp = /\B(?=(\d{3})+(?!\d))/g;
 
 export const priceConvert = (price: number) =>
   price.toString().replace(priceRegexp, " ") + " ₽";
+
+export const formOfNumWord = (num: number) => {
+  if (num % 10 == 0 || num % 10 > 4 || num % 100 === 11) {
+    return num + " отзывов";
+  }
+  if (num % 10 === 1) {
+    return num + " отзыв";
+  } else {
+    return num + " отзыва";
+  }
+};

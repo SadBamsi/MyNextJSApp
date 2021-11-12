@@ -1,0 +1,14 @@
+.form {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: auto auto 1fr auto auto;
+  gap: 20px;
+}
+
+.note {
+  text-align: right;
+}
+
+.textarea {
+  grid-column: 1 / -1;
+}
